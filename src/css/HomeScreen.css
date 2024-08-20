@@ -1,0 +1,121 @@
+/* Define the shake animation */
+@keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(1deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+  
+  /* Apply the animation to the element */
+  .shake {
+    display: inline-block;
+    animation: shake 0.5s infinite; /* Adjust the duration and repeat count */
+  }
+
+
+
+
+
+
+
+
+  /* Container for the coins */
+.coin-container {
+    position: absolute;
+    width: 300px; /* Adjust based on your layout */
+    height: 300px;
+    overflow: visible;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin-top: 50%;
+
+
+  }
+  
+  /* Individual coin */
+  .coin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+    opacity: 0;
+    animation: collect 2s ease-in-out infinite;
+  }
+  
+  /* Animation to move the coin to the counter */
+  @keyframes collect {
+    0% {
+      opacity: 1;
+      transform: translate(0px, 0px) scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translate(150px, -150px) scale(0.5); /* Move towards the counter */
+    }
+    100% {
+      opacity: 0;
+      transform: translate(300px, -300px) scale(0); /* End at the counter */
+    }
+  }
+  
+  /* Adjust the starting positions for each coin */
+  .coin:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+  }
+  
+  .coin:nth-child(2) {
+    top: 50px;
+    left: 50px;
+    animation-delay: 0.2s;
+  }
+  
+  .coin:nth-child(3) {
+    top: 100px;
+    left: 100px;
+    animation-delay: 0.4s;
+  }
+  
+  /* Coin counter (destination) */
+  .coin-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  

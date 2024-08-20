@@ -5,9 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-1);
+  color: var(--color-text-1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body{padding:20px!important;}
+ #demo-button{width: 375px;}
+.arcodesign-mobile-demo-content{padding: 20px;}
+
+
