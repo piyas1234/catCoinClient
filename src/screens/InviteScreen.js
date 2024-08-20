@@ -46,7 +46,7 @@ const InviteScreen = () => {
 
   return (
     <div className="social-share-screen">
-      <h1 className="title">Invite your friends to get 2x coins on tap for every invite!</h1>
+    <h1 className="title">Invite your friends to earn double coins for each invite and receive 20,000 rewards for every game played!</h1>
       <div className="buttons">
         <FacebookShareButton url={shareUrl} quote={title}>
           <FacebookIcon size={50} round />

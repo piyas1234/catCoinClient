@@ -31,6 +31,7 @@ function HomeScreen() {
     last_name,
     refers,
     username,
+    dailySpin,
     _id
   } = userInfo.user ?? {};
   const [coins, setCoins] = React.useState(0);
@@ -41,8 +42,10 @@ function HomeScreen() {
   const [showConfetti, setShowConfetti] = React.useState(false);
   const userName = `${first_name} ${last_name}`;
 
+  console.log(userInfo)
+
   const handleClick = () => {
-    setCoins((prevCoins) => prevCoins + 1);
+    setCoins((prevCoins) => prevCoins + dailySpin);
     setAnimate(true);
     setAnimateCoin(true);
 
